@@ -26,20 +26,25 @@ img {
 .main {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 1rem
 }
 
 .card {
-  width: clamp(20ch, 50%, var(--content-width));
-  margin: 2rem;
-  border: .5rem solid black;
+  display: flex;
+  /* width: clamp(20ch, calc(1/4 * 100%), 100%); */
+  flex: 1 1 clamp(20ch, calc(1/4 * 100%), 100%);
   container-type: inline-size;
+  border: .5rem solid black;
+  
 }
 
 .card:nth-of-type(2) {
   flex-grow: 3;
 }
 
-@container (min-width: 60ch) {
+@container (min-width: 35ch) {
   .card-inner {
     display: flex;
   }

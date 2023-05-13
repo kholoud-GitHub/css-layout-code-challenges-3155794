@@ -9,14 +9,19 @@ figure {
 img {
   display: block;
   max-width: 100%;
+  
 }
 
 .wrapper {
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
 .image img {
-
+  max-height: 100vh;
+  object-fit: cover;
 }
 
 .cover {
